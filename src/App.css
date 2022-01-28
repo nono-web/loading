@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111 ;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.App span:nth-child(1) {
+    border-color: #e64032;
+    border-radius: 48% 52% 55% 45% / 45% 34% 66% 55%;
+}
+
+.App span:nth-child(2) {
+    border-color: #F6B801 ;
+    border-radius: 74% 26% 68% 32% / 21% 55% 45% 79%;
+    animation-direction: reverse;
+}
+
+.App span:nth-child(3) {
+    border-color: #31a452 ;
+    border-radius: 43% 57% 57% 43% / 49% 70% 30% 51%;
+    animation-duration: 2,5s;
+}
+
+.App span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    pointer-events: none;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.App h2 {
+    color: #b1ddf1;
+    font-family: consolas, sans-serif;
+    font-weight: 500;
+}
